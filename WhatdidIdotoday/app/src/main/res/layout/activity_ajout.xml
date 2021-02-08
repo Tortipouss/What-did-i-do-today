@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBakcground"
+    tools:context=".ACT_Ajout">
+
+    <TextView
+        android:id="@+id/txtvi_ajouterActivite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ajouter une nouvelle activité"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="21sp" />
+
+    <LinearLayout
+        android:id="@+id/lnrlyt_nomDeLaTache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtvi_ajouterActivite"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom de la tâche : "
+            android:textColor="@color/colorText" />
+
+        <EditText
+            android:id="@+id/edtTxt_taskName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Played guitar"
+            android:hint="Played guitar"
+            android:inputType="text"
+            android:textColor="@color/colorText" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/lnrlyt_nomDeLaTache"
+        android:background="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/txtvi_choixImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lnrlyt_nomDeLaTache"
+        android:layout_marginTop="20dp"
+        android:text="Choix de l'image : "
+        android:textColor="@color/colorText" />
+
+    <GridLayout
+        android:id="@+id/grdLyt_imgChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtvi_choixImage"
+        android:layout_marginTop="20dp"
+        android:columnCount="4"
+        android:useDefaultMargins="true">
+
+        <ImageView
+            android:id="@+id/img_guitare"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/guitar_blacktheme" />
+
+        <ImageView
+            android:id="@+id/img_diplome"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/diploma_blacktheme" />
+
+        <ImageView
+            android:id="@+id/img_lampe"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/lampe_blacktheme" />
+
+        <ImageView
+            android:id="@+id/img_caddie"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/add_shopping_cart_24px" />
+
+        <ImageView
+            android:id="@+id/img_telephone"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/call_24px" />
+
+        <ImageView
+            android:id="@+id/img_pousette"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/child_friendly_24px" />
+
+        <ImageView
+            android:id="@+id/img_voiture"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/directions_car_24px" />
+
+        <ImageView
+            android:id="@+id/img_facebook"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/facebook_24px" />
+
+        <ImageView
+            android:id="@+id/img_fitness"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/fitness_center_24px" />
+
+        <ImageView
+            android:id="@+id/img_caffee"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/free_breakfast_24px" />
+
+        <ImageView
+            android:id="@+id/img_outils"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/handyman_24px" />
+
+        <ImageView
+            android:id="@+id/img_http"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/http_24px" />
+
+        <ImageView
+            android:id="@+id/img_velo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/pedal_bike_24px" />
+
+        <ImageView
+            android:id="@+id/img_etudes"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/school_24px" />
+
+        <ImageView
+            android:id="@+id/img_science"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/science_24px" />
+
+        <ImageView
+            android:id="@+id/img_onde"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/speaker_phone_24px" />
+
+        <ImageView
+            android:id="@+id/img_youtube"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/subscriptions_24px" />
+
+        <ImageView
+            android:id="@+id/img_message"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/textsms_24px" />
+
+        <ImageView
+            android:id="@+id/img_moto"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/two_wheeler_24px" />
+
+        <ImageView
+            android:id="@+id/img_valise"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/work_outline_24px" />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btn_valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grdLyt_imgChoice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimary"
+        android:text="valider" />
+
+</RelativeLayout>

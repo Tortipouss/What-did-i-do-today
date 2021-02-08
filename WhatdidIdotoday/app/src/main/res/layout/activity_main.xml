@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rltlyt_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBakcground"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Barre de navigation -->
+    <LinearLayout
+        android:id="@+id/lyt_nav"
+        android:layout_below="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="today"
+            android:textColor="@color/colorText" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/forward" />
+    </LinearLayout>
+    <!-- Fin barre de navigation -->
+
+    <RelativeLayout
+        android:id="@+id/rlLyt_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lyt_nav"
+        android:layout_marginTop="50dp">
+
+        <!-- première ligne -->
+        <LinearLayout
+            android:id="@+id/lnrLyt_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/imgvi_cir_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/cir_1" />
+
+            <TextView
+                android:id="@+id/txt_activity_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_weight="3"
+                android:text="TEST"
+                android:textColor="@color/colorText"
+                android:textAlignment="center"
+                />
+
+            <ImageView
+                android:id="@+id/imgvi_play_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!-- deuxième ligne -->
+        <LinearLayout
+            android:id="@+id/lnrLyt_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lnrLyt_1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/imgvi_cir_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/cir_2" />
+
+            <TextView
+                android:id="@+id/txt_activity_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_weight="3"
+                android:text="TEST"
+                android:textColor="@color/colorText"
+                android:textAlignment="center"
+             />
+
+            <ImageView
+                android:id="@+id/imgvi_play_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!-- troisième ligne -->
+        <LinearLayout
+            android:id="@+id/lnrLyt_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lnrLyt_2"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/imgvi_cir_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/cir_3" />
+
+            <TextView
+                android:id="@+id/txt_activity_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_weight="3"
+                android:text="TEST"
+                android:textColor="@color/colorText"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/imgvi_play_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!-- quatrième ligne -->
+        <LinearLayout
+            android:id="@+id/lnrLyt_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lnrLyt_3"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/imgvi_cir_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/cir_4" />
+
+            <TextView
+                android:id="@+id/txt_activity_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_weight="3"
+                android:text="TEST"
+                android:textColor="@color/colorText"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/imgvi_play_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!-- cinquième ligne -->
+        <LinearLayout
+            android:id="@+id/lnrLyt_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lnrLyt_4"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/imgvi_cir_5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/cir_5" />
+
+            <TextView
+                android:id="@+id/txt_activity_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_weight="3"
+                android:text="TEST"
+                android:textColor="@color/colorText"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/imgvi_play_5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_below="@+id/rlLyt_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <Button
+        android:id="@+id/btn_newDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fab"
+        android:layout_centerHorizontal="true"
+        android:text="new day"/>
+
+
+</RelativeLayout>
