@@ -20,14 +20,13 @@ import java.util.ArrayList;
 public class ACT_Ajout extends AppCompatActivity {
 
     private SQLiteDB db;
-    private ArrayList<Integer> arrImg;
+    private ArrayList<tache> arrImg;
     EditText etNomTache;
 
     private RelativeLayout relativeLayout;
 
     TextView txtVi_ajoutActiv;
     TextView txtVi_choixImage;
-    TextView txtVi_nomTache;
 
     ImageView guitar;
     ImageView diploma;
@@ -49,12 +48,21 @@ public class ACT_Ajout extends AppCompatActivity {
     ImageView message;
     ImageView moto;
     ImageView work;
+    ImageView walkingMan;
+    ImageView laptop;
+    ImageView book;
+    ImageView micro;
+    ImageView paper;
+
+    ArrayList<String> arrHint;
 
     Drawable encadre;
 
     int selectedImage = 0;
 
     Button btn_valider;
+
+    ArrayList<ImageView> arr_imgViews;
 
 
     @Override
@@ -63,7 +71,7 @@ public class ACT_Ajout extends AppCompatActivity {
         setContentView(R.layout.activity_ajout);
 
         db = new SQLiteDB(this);
-        arrImg = db.getAlltachesImg();
+        arrImg = db.getAlltachesAtDay(1);
         encadre = ContextCompat.getDrawable(this, R.drawable.encardre);
 
         final Intent valeurSaisie = new Intent().setClass(this, MainActivity.class);
@@ -92,200 +100,98 @@ public class ACT_Ajout extends AppCompatActivity {
         message = findViewById(R.id.img_message);
         moto = findViewById(R.id.img_moto);
         work = findViewById(R.id.img_valise);
+        walkingMan = findViewById(R.id.img_walkingMen);
+        laptop = findViewById(R.id.img_laptop);
+        book = findViewById(R.id.img_livre);
+        micro = findViewById(R.id.img_mic);
+        paper = findViewById(R.id.img_paper);
+
+        arr_imgViews = new ArrayList<>();
+        arr_imgViews.add(guitar);
+        arr_imgViews.add(diploma);
+        arr_imgViews.add(lampe);
+        arr_imgViews.add(caddie);
+        arr_imgViews.add(phone);
+        arr_imgViews.add(bebe);
+        arr_imgViews.add(voiture);
+        arr_imgViews.add(facebook);
+        arr_imgViews.add(fitness);
+        arr_imgViews.add(coffee);
+        arr_imgViews.add(reparation);
+        arr_imgViews.add(http);
+        arr_imgViews.add(bike);
+        arr_imgViews.add(education);
+        arr_imgViews.add(science);
+        arr_imgViews.add(mobile);
+        arr_imgViews.add(youtube);
+        arr_imgViews.add(message);
+        arr_imgViews.add(moto);
+        arr_imgViews.add(work);
+        arr_imgViews.add(walkingMan);
+        arr_imgViews.add(laptop);
+        arr_imgViews.add(book);
+        arr_imgViews.add(micro);
+        arr_imgViews.add(paper);
+
         btn_valider = findViewById(R.id.btn_valider);
         etNomTache = findViewById(R.id.edtTxt_taskName);
+        arrHint = new ArrayList<>();
+
+        arrHint.add("Music");
+        arrHint.add("At school");
+        arrHint.add("At desk");
+        arrHint.add("Shopping");
+        arrHint.add("In a call");
+        arrHint.add("Taken care of baby");
+        arrHint.add("Driving");
+        arrHint.add("Facebook time");
+        arrHint.add("Sport");
+        arrHint.add("Breakfast");
+        arrHint.add("Reparing");
+        arrHint.add("Coding");
+        arrHint.add("Biking");
+        arrHint.add("Studying");
+        arrHint.add("Science time");
+        arrHint.add("Spend time on phone");
+        arrHint.add("Youtube");
+        arrHint.add("Messaging");
+        arrHint.add("Biking");
+        arrHint.add("Working");
+        arrHint.add("Walking");
+        arrHint.add("Spend some time on computer");
+        arrHint.add("Read some books");
+        arrHint.add("Recorded myself");
+        arrHint.add("Paperwork");
+
         // endregion
-
-
         // region onclick Images
-        guitar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 1;
-                deselectAll();
-                guitar.setBackground(encadre);
-            }
-        });
-
-        diploma.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 2;
-                deselectAll();
-                diploma.setBackground(encadre);
-            }
-        });
-
-        lampe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 3;
-                deselectAll();
-                lampe.setBackground(encadre);
-            }
-        });
-
-        caddie.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 4;
-                deselectAll();
-                caddie.setBackground(encadre);
-            }
-        });
-
-        phone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 5;
-                deselectAll();
-                phone.setBackground(encadre);
-            }
-        });
-
-        bebe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 6;
-                deselectAll();
-                bebe.setBackground(encadre);
-            }
-        });
-
-        voiture.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 7;
-                deselectAll();
-                voiture.setBackground(encadre);
-            }
-        });
-
-        facebook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 8;
-                deselectAll();
-                facebook.setBackground(encadre);
-            }
-        });
-
-        fitness.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 9;
-                deselectAll();
-                fitness.setBackground(encadre);
-            }
-        });
-
-        coffee.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 10;
-                deselectAll();
-                coffee.setBackground(encadre);
-            }
-        });
-
-        reparation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 11;
-                deselectAll();
-                reparation.setBackground(encadre);
-            }
-        });
-
-        http.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 12;
-                deselectAll();
-                http.setBackground(encadre);
-            }
-        });
-
-        bike.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 13;
-                deselectAll();
-                bike.setBackground(encadre);
-            }
-        });
-
-        education.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 14;
-                deselectAll();
-                education.setBackground(encadre);
-            }
-        });
-
-        science.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 15;
-                deselectAll();
-                science.setBackground(encadre);
-            }
-        });
-
-        mobile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 16;
-                deselectAll();
-                mobile.setBackground(encadre);
-            }
-        });
-
-        youtube.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 17;
-                deselectAll();
-                youtube.setBackground(encadre);
-            }
-        });
-
-        message.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 18;
-                deselectAll();
-                message.setBackground(encadre);
-            }
-        });
-
-        moto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 19;
-                deselectAll();
-                moto.setBackground(encadre);
-            }
-        });
-
-        work.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedImage = 20;
-                deselectAll();
-                work.setBackground(encadre);
-            }
-        });
+        for (int i = 0; i < arr_imgViews.size(); i++) {
+            final int finalI = i;
+            arr_imgViews.get(i).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    selectedImage = finalI + 1;
+                    deselectAll();
+                    arr_imgViews.get(finalI).setBackground(encadre);
+                    etNomTache.setHint(arrHint.get(finalI));
+                }
+            });
+        }
         //endregion
 
         btn_valider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int choixTache = choixTache();
-                if(choixTache > -1 && choixTache <= arrImg.size()){
-                    db.editTache(choixTache, etNomTache.getText().toString(), selectedImage);
-                    startActivity(valeurSaisie);
+                if (selectedImage != 0) {
+                    int choixTache = choixTache();
+                    if (etNomTache.getText().toString().isEmpty()) {
+                        etNomTache.setText(arrHint.get(selectedImage - 1));
+                    }
+
+                    if (choixTache > -1 && choixTache <= arrImg.size()) {
+                        db.editTache(choixTache, etNomTache.getText().toString(), selectedImage, 1);
+                        startActivity(valeurSaisie);
+                    }
                 }
             }
         });
@@ -294,36 +200,20 @@ public class ACT_Ajout extends AppCompatActivity {
     /**
      * Enleve l'encadré sur toutes les images selectionnées
      */
-    private void deselectAll(){
-        guitar.setBackground(null);
-        diploma.setBackground(null);
-        lampe.setBackground(null);
-        caddie.setBackground(null);
-        phone.setBackground(null);
-        bebe.setBackground(null);
-        voiture.setBackground(null);
-        facebook.setBackground(null);
-        fitness.setBackground(null);
-        coffee.setBackground(null);
-        reparation.setBackground(null);
-        http.setBackground(null);
-        bike.setBackground(null);
-        education.setBackground(null);
-        science.setBackground(null);
-        mobile.setBackground(null);
-        youtube.setBackground(null);
-        message.setBackground(null);
-        moto.setBackground(null);
-        work.setBackground(null);
+    private void deselectAll() {
+        for (int i = 0; i < arr_imgViews.size(); i++) {
+            arr_imgViews.get(i).setBackground(null);
+        }
     }
 
     /**
      * Choisi quelle tache mettre a jour
+     *
      * @return la tache a mettre à jour
      */
-    private int choixTache(){
-        for(int i=0;i<arrImg.size();i++){
-            if(arrImg.get(i) == -1){
+    private int choixTache() {
+        for (int i = 0; i < arrImg.size(); i++) {
+            if (arrImg.get(i).getValueImg() == -1) {
                 return i + 1;
             }
         }

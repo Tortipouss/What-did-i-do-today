@@ -3,6 +3,7 @@ package com.gallale.whatdididotoday;
 public class tache {
     private String valueTxt;
     private int valueImg;
+    private int valueDay;
 
     public tache(){
     }
@@ -23,9 +24,19 @@ public class tache {
         this.valueImg = valueImg;
     }
 
-    public tache(String valueTxt, int valueImg){
+    public int getValueDay() {
+        return valueDay;
+    }
+
+    public void setValueDay(int valueDay) {
+        this.valueDay = valueDay;
+    }
+
+
+    public tache(String valueTxt, int valueImg, int valueDay){
         this.valueTxt = valueTxt;
         this.valueImg = valueImg;
+        this.valueDay = valueDay;
     }
 }
 

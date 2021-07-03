@@ -35,7 +35,8 @@
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/back" />
+            android:src="@drawable/back"
+            android:visibility="invisible"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -48,7 +49,8 @@
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/forward" />
+            android:src="@drawable/forward"
+            android:visibility="invisible"/>
     </LinearLayout>
     <!-- Fin barre de navigation -->
 
@@ -244,6 +246,154 @@
 
         </LinearLayout>
 
+        <!-- sixieme ligne -->
+        <LinearLayout
+            android:id="@+id/lnrLyt_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lnrLyt_5"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/imgvi_cir_6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/cir_6" />
+
+            <TextView
+                android:id="@+id/txt_activity_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_weight="3"
+                android:text="TEST"
+                android:textColor="@color/colorText"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/imgvi_play_6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!-- septieme ligne -->
+        <LinearLayout
+            android:id="@+id/lnrLyt_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lnrLyt_6"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/imgvi_cir_7"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/cir_7" />
+
+            <TextView
+                android:id="@+id/txt_activity_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_weight="3"
+                android:text="TEST"
+                android:textColor="@color/colorText"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/imgvi_play_7"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!-- huitieme ligne -->
+        <LinearLayout
+            android:id="@+id/lnrLyt_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lnrLyt_7"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/imgvi_cir_8"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/cir_8" />
+
+            <TextView
+                android:id="@+id/txt_activity_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_weight="3"
+                android:text="TEST"
+                android:textColor="@color/colorText"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/imgvi_play_8"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!-- neuvieme ligne -->
+        <LinearLayout
+            android:id="@+id/lnrLyt_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lnrLyt_8"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/imgvi_cir_9"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/cir_9" />
+
+            <TextView
+                android:id="@+id/txt_activity_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_weight="3"
+                android:text="TEST"
+                android:textColor="@color/colorText"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/imgvi_play_9"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
     </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -262,6 +412,14 @@
         android:layout_below="@+id/fab"
         android:layout_centerHorizontal="true"
         android:text="new day"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Developped by Alex Gallucci\nContact : pro@alexg.ch"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/btn_newDay"
+        android:layout_marginTop="20dp"/>
 
 
 </RelativeLayout>

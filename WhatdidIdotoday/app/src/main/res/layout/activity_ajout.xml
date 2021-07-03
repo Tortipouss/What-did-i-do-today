@@ -11,7 +11,7 @@
         android:id="@+id/txtvi_ajouterActivite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ajouter une nouvelle activité"
+        android:text="Add a new activity"
         android:textAlignment="center"
         android:textColor="@color/colorText"
         android:textSize="21sp" />
@@ -26,7 +26,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nom de la tâche : "
+            android:text="Name of the task : "
             android:textColor="@color/colorText" />
 
         <EditText
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/lnrlyt_nomDeLaTache"
         android:layout_marginTop="20dp"
-        android:text="Choix de l'image : "
+        android:text="Picture : "
         android:textColor="@color/colorText" />
 
     <GridLayout
@@ -69,7 +69,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/guitar_blacktheme" />
+            android:src="@drawable/ic_baseline_audiotrack_24" />
 
         <ImageView
             android:id="@+id/img_diplome"
@@ -93,7 +93,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/add_shopping_cart_24px" />
+            android:src="@drawable/ic_baseline_shopping_cart_24" />
 
         <ImageView
             android:id="@+id/img_telephone"
@@ -101,7 +101,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/call_24px" />
+            android:src="@drawable/ic_baseline_call_24" />
 
         <ImageView
             android:id="@+id/img_pousette"
@@ -109,7 +109,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/child_friendly_24px" />
+            android:src="@drawable/ic_baseline_child_friendly_24" />
 
         <ImageView
             android:id="@+id/img_voiture"
@@ -117,7 +117,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/directions_car_24px" />
+            android:src="@drawable/ic_baseline_directions_car_24" />
 
         <ImageView
             android:id="@+id/img_facebook"
@@ -133,7 +133,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/fitness_center_24px" />
+            android:src="@drawable/ic_baseline_fitness_center_24" />
 
         <ImageView
             android:id="@+id/img_caffee"
@@ -141,7 +141,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/free_breakfast_24px" />
+            android:src="@drawable/ic_baseline_free_breakfast_24" />
 
         <ImageView
             android:id="@+id/img_outils"
@@ -149,7 +149,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/handyman_24px" />
+            android:src="@drawable/ic_baseline_build_24" />
 
         <ImageView
             android:id="@+id/img_http"
@@ -157,7 +157,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/http_24px" />
+            android:src="@drawable/ic_baseline_code_24" />
 
         <ImageView
             android:id="@+id/img_velo"
@@ -165,7 +165,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/pedal_bike_24px" />
+            android:src="@drawable/ic_baseline_directions_bike_24" />
 
         <ImageView
             android:id="@+id/img_etudes"
@@ -173,7 +173,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/school_24px" />
+            android:src="@drawable/ic_baseline_school_24" />
 
         <ImageView
             android:id="@+id/img_science"
@@ -189,7 +189,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/speaker_phone_24px" />
+            android:src="@drawable/ic_baseline_speaker_phone_24" />
 
         <ImageView
             android:id="@+id/img_youtube"
@@ -197,7 +197,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/subscriptions_24px" />
+            android:src="@drawable/ic_baseline_subscriptions_24" />
 
         <ImageView
             android:id="@+id/img_message"
@@ -205,7 +205,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/textsms_24px" />
+            android:src="@drawable/ic_baseline_message_24" />
 
         <ImageView
             android:id="@+id/img_moto"
@@ -213,7 +213,7 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/two_wheeler_24px" />
+            android:src="@drawable/ic_baseline_two_wheeler_24" />
 
         <ImageView
             android:id="@+id/img_valise"
@@ -221,7 +221,47 @@
             android:layout_height="55dp"
             android:layout_columnWeight="1"
             android:layout_marginStart="30dp"
-            android:src="@drawable/work_outline_24px" />
+            android:src="@drawable/ic_baseline_work_24" />
+
+        <ImageView
+            android:id="@+id/img_walkingMen"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_baseline_directions_walk_24" />
+
+        <ImageView
+            android:id="@+id/img_laptop"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_baseline_laptop_24" />
+
+        <ImageView
+            android:id="@+id/img_livre"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_baseline_menu_book_24" />
+
+        <ImageView
+            android:id="@+id/img_mic"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_baseline_mic_24" />
+
+        <ImageView
+            android:id="@+id/img_paper"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_baseline_library_books_24" />
 
     </GridLayout>
 
@@ -233,6 +273,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:background="@color/colorPrimary"
-        android:text="valider" />
+        android:text="OK" />
 
 </RelativeLayout>
